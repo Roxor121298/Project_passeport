@@ -23,7 +23,7 @@ public class PasseportTest {
         Passeport p = new Passeport();
         //ajouter une Dose datant du 8 novembre 2021, Moderna
         Dose d = new Dose("Moderna", new GregorianCalendar(2021, 10, 8));
-        assertTrue(p.ajouterDose(d));
+        assertTrue(p.ajouterDose(p.doses));
     }
 
     @Test
@@ -34,7 +34,7 @@ public class PasseportTest {
         doses[1] = new Dose ( "Pfizer", new GregorianCalendar(2022, 6,7));
         doses[2] = new Dose("Pfizer", new GregorianCalendar(2023, 1, 14));
         Passeport p = new Passeport(doses);
-        assertEquals(-1, p.possibleDAvoirAutreDose());
+        assertEquals(-1, p.possibleDAvoirAutreDose(p.doses));
     }
     @Test
     public void testerPasseportVaccinTrotTot()
