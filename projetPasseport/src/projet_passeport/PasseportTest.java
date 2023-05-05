@@ -54,7 +54,7 @@ public class PasseportTest {
 
 
         Passeport p = new Passeport(doses);
-        assertTrue( p.ajouterDose(new Dose("Pfizer", new GregorianCalendar())));
+        assertTrue(p.ajouterDose(new Dose("Pfizer", new GregorianCalendar())));
     }
 
 

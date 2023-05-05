@@ -22,12 +22,11 @@ public class Passeport {
     {
         int i=-1;
         // vérifier s'il y a une Dose libre sur 3, retourner l'indice ou -1 s'il n'y a plus d'indice libre sur 3
-        for(int j=0;j!=3;j++){
-            String rep=doses[0].getFournisseur();
-            if(rep == null)
+        for (int j=0;j<3;j++) {
+            if (doses[j].getDateVaccination() == null)
                 i++;
         }
-    return i;
+        return i;
     }
 
     public boolean ajouterDose (Dose[] d)
@@ -41,6 +40,7 @@ public class Passeport {
             return true;
 	// si ce n'est pas le premier vaccin, calculer délai de 6 mois pour savoir si possible, l'ajouter dans le tableau si ce l'est
         else
+
             return true;
      }
 }
